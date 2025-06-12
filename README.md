@@ -9,10 +9,13 @@
 ## 🚀 Features
 
 - ✨ **Inline Translation Pipe Detection**  
-  Highlights `{{ 'key' | translate }}` in HTML and `this.translate.transform('key')` in TypeScript automatically.
+  Highlights `{{ 'key' | translate }}` in HTML and `this.translate.transform('key')` in TypeScript automatically. Other formats are configurable in the Settings.
 
-- 🖱️ **Cursor-Aware Popup Editor**  
+- 🖱️ **Cursor-Aware Popup Editor and Autocomplete**  
   Instantly view and update translations with a smart popup when your cursor lands inside a translation pipe.
+
+  ![Tooltip](https://github.com/manuba245/autolocale-issues/blob/main/images/tooltip.png)
+  ![Autocomplete](https://github.com/manuba245/autolocale-issues/blob/main/images/autocomplete.png)
 
 - ➕ **Insert Translation Pipe**  
   Insert a `translate` pipe with a pre-filled key at the current cursor position.
@@ -23,8 +26,12 @@
 - 🧾 **Translation Table Editor**  
   Edit all keys and languages in a sortable, filterable table with inline editing, bulk save, import/export, and conflict highlighting.
 
+  ![Translations Table](https://github.com/manuba245/autolocale-issues/blob/main/images/table-editor.png)
+
 - ✏️ **Edit & Save Translations**  
   Easily update translations in multiple languages using intuitive popups or the table editor.
+
+  ![Edit Translation](https://github.com/manuba245/autolocale-issues/blob/main/images/edit-single-translation.png)
 
 - ✅ **Validation & Consistency Checks**  
   Detects:
@@ -32,6 +39,8 @@
   - Duplicate keys
   - Conflicting values
   - Non-nested vs flat key inconsistencies
+
+  ![Validation](https://github.com/manuba245/autolocale-issues/blob/main/images/validation.png)
 
 - 📤 **Export Translations to CSV**  
   Export selected or all language keys to a UTF-8 BOM-compatible CSV (Excel-friendly).
@@ -44,6 +53,8 @@
 
 - 🧩 **Quick Command Menu**  
   Access all features from a status bar menu or the Command Palette.
+
+  ![Autocomplete](https://github.com/manuba245/autolocale-issues/blob/main/images/menu.png)
 
 ---
 
@@ -70,7 +81,7 @@ Click the **🌐 AutoLocale** button in the VS Code status bar (bottom left) to 
 
 ### ➕ Insert Translation Pipe
 
-- Run `Insert Translation Pipe` from the Command Palette.
+- Run `Insert Translation Pipe` from the Command Palette^or by pressing cmd+alt+t.
 - A new key like `new.translation.key` will be inserted at the cursor.
 
 ### 🧭 Manage Translation Files
@@ -149,6 +160,7 @@ You can customize detection and override paths from the Settings panel.
 
 - Large translation files may reduce performance during validation or table rendering.
 - Dynamic translation keys (e.g., via variables or runtime strings) are not currently supported.
+- Only json translation files are supported currently.
 
 ---
 
